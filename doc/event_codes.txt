@@ -1,0 +1,178 @@
+
+ES - Die Sendung wurde vom Absender in der Filiale eingeliefert.
+VA - elektronische Sendungsdaten wurden übermittelt
+AA - erster Scan im Abgangspaketzentrum der DHL
+EE - zweiter Scan im Eingangspaketzentrum der DHL ( sofern der Empfänger in der Zustellregion des ersten Paketzentrums liegt gibt es NUR ein EE Event AA entfällt )
+PO - Beladung durch den Zusteller
+ZU - erfolgreiche Zustellung
+oder
+ZF - Sendung wurde benachrichtigt und lagert in der Filiale zur Abholung gefolgt von einem ZF
+oder
+ZN - Annahme verweigert / Sendung nach Lagerfrist nicht in der Filiale abgeholt / unbekannter Empfänger
+
+
+ice_event_code  ice_ric_code  ice_event_name  ice_ric_name  ice_event_name_de ice_ric_name_de ttpro_event_code
+ASMVT NRQRD Assigned to movement / tour vehicle ICE Details Transportzuweisung  Keine weiteren Details erforderlich AA
+HUCRT NRQRD Handling unit created ICE Details Gebindefertigung  Keine weiteren Details erforderlich AA
+LDTMV MVMTV Loaded to movement / tour vehicle Movement / tour vehicle Abgang  Beladung  AA
+MVDPT NRQRD Movement / tour vehicle departed  ICE Details Fahrzeug hat den Standort verlassen Keine weiteren Details erforderlich AA
+OFWRD RTSCR Onforwarded Return to shipper at customer request Nachsendung / Rücksendung Rücksendung aufgrund von Kundenwunsch AA
+SRTED FWAPS Sorted  ForWarded for Army Postal Service Sortierung  Weiterleitung für die Feldpost-Bearbeitung  AA
+SRTED FWEXH Sorted  ForWarded for Export Handling Sortierung  Weiterleitung zur Exportbearbeitung AA
+SRTED FWEXP Sorted  ForWarded for EXPress handling  Sortierung  Weiterleitung zum Transport im Express-Netzwerk AA
+PCKDU BKHCR Picked up Bulk pick up  Abholung  Sperrgut-Abholung AE
+PCKDU PUBCR Picked up Piece pick up Abholung  Erfolgreich abgeholt  AE
+NTPUP CLOSD Not picked up Closed  Nicht abgeholt  Geschlossen AN
+NTPUP CPUNK Not picked up Company dissolved / unknown Nicht abgeholt  Empfänger unbekannt AN
+NTPUP CRROT Not picked up Courier out of time Nicht abgeholt  Kurier zu spät / Schicht zuende AN
+NTPUP DMGED Not picked up Damage under investigation  Nicht abgeholt  Keine Übernahme wegen Beschädigung  AN
+NTPUP GDNMS Not picked up Goods / packaging not meet standard Nicht abgeholt  Sendung entspricht nicht den DHL-Standards  AN
+NTPUP GDNRD Not picked up Goods not ready Nicht abgeholt  Sendung war nicht versandfertig AN
+NTPUP NPYMT Not picked up No payment  Nicht abgeholt  Keine Abholung wg. Zahlungsproblemen  AN
+NTPUP NTHND Not picked up Customer refused to hand over the shipment to DHL Nicht abgeholt  Die Herausgabe der Sendung wurde verweigert AN
+NTPUP NTHNG Not picked up Nothing to collect  Nicht abgeholt  Keine Sendung zur Abholung vorhanden  AN
+NTPUP OTHER Not picked up Other Nicht abgeholt  Andere Gründe AN
+NTPUP SPCNR Not picked up Shipper cannot be reached Nicht abgeholt  Versender wurde nicht angetroffen AN
+NTPUP WRGTR Not picked up Wrong tour  Nicht abgeholt  Falsche Tour  AN
+CHECK SVCHG Checked Product feature check - Service changed Produktmerkmal-Prüfung  Produktprüfung - Service geändert BV
+CNFSC LEGAT Confiscation  LEGal AuThority Beschlagnahme/Postsperre  Übergabe der Sendung an Bevollmächtigten  BV
+DMGDS DMGPC Damage discovered Damaged in process  Beschädigt  Beschädigt bei der Bearbeitung vorgefunden  BV
+DMGDS PUDMG Damage discovered Picked up damaged Beschädigt  Erfolgreich abgeholt - Sendung beschädigt übernommen  BV
+DSPSD CRQST Disposed of Customer request  Vernichtung Sendung wurde auf Kundenwunsch vernichtet BV
+DSPSD NTCLM Disposed of Not claimed Vernichtung Vernichtung wg. Nichtabholung BV
+DTNPC NPRPF Data, but no piece  No piece received from previous facility  Daten ohne Sendung  Erwartete Sendung nicht eingetroffen  BV
+EXPHD DMGED Exception hold  Damage under investigation  Sonderereignis  Keine Übernahme wegen Beschädigung  BV
+EXPHD FFTCH Exception hold  Failed product feature validation Sonderereignis  Produkteigenschaften-Prüfung negativ  BV
+EXPHD GDNMS Exception hold  Goods / packaging not meet standard Sonderereignis  Sendung entspricht nicht den DHL-Standards  BV
+EXPHD INCSH Exception hold  Incomplete shipment Sonderereignis  Mehrteilige Sendung unvollständig BV
+EXPHD MSSDT Exception hold  Missing data  Sonderereignis  fehlende Daten  BV
+EXPHD OTHER Exception hold  Other Sonderereignis  Andere Gründe BV
+EXPHD PWMFD Exception hold  Paperwork missing Sonderereignis  Fehlende Zolldokumente  BV
+EXPHD STPRB Exception hold  Sort problem  Sonderereignis  Sortierproblem  BV
+EXPHD UDFPC Exception hold  Unidentifiable piece  Sonderereignis  Unidentifizierbars Packstück  BV
+HLDCU NORSN Held by Customs No reason Zollbearbeitung Keine weitere Begründung durch Zoll BV
+LDEXC OVRLD Loading exception Overload  Ladungsrückstellung Abladung wg. Überladung BV
+MSRTD CRRFN Mis routed  Correct routing information but at the wrong facility / hub / gateway Routingfehler Sortierfehler - richtiger Routing-Code / Sendung in falscher Lokation BV
+MSRTD ICRRT Mis routed  Incorrect routing information Routingfehler Fehlrouting wg. falschem Routingcode  BV
+MVDEX FRMJR Movement / tour vehicle departure exception Force majeur  Fahrzeug verspätet  Verzögerung wegen höherer Gewalt  BV
+MVDEX VHARU Movement / tour vehicle departure exception Vehicle / aircraft unavailable  Fahrzeug verspätet  Fahrzeugt nicht bereit  BV
+MVTEX FRMJR Movement / tour vehicle exception Force majeur  Problem beim Transport  Verzögerung wegen höherer Gewalt  BV
+MVTEX TCATC Movement / tour vehicle exception Traffic Congestion / Air traffic control  Problem beim Transport  Verkehrsstau  BV
+MVTEX TCHBD Movement / tour vehicle exception Technical / Breakdown Problem beim Transport  Technische Probleme BV
+OFWRD RTSCR Onforwarded Return to shipper at customer request Nachsendung / Rücksendung Rücksendung aufgrund von Kundenwunsch BV
+PBNDT NDRFC Piece, but no data  No data received from customer  Sendung ohne Daten  Fehlende EDI-Daten vom Kunden BV
+PBNDT NDRFN Piece, but no data  No data received from network Sendung ohne Daten  Fehlende EDI-Daten vom Netzwerk BV
+RCCLS GHSTP Record closed Ghost piece Sendungslauf beendet  Daten ohne Sendung  BV
+SECHK CCXRI Security checked  Content Check - X Ray inspection  Sicherheitsprüfung  Inhaltkontrolle - Durchleuchtung  BV
+SECHK IVHUP Security checked  Integrity verification - HU/piece Sicherheitsprüfung  Integritätsprüfung  BV
+DMGDS ULDMG Damage discovered Unloaded damaged  Beschädigt  Bei Entladung beschädigt vorgefunden  EE
+EXPHD FDGCH Exception hold  Failed security check Sonderereignis  Sicherheitsprüfung negativ  EE
+EXPHD OTHER Exception hold  Other Sonderereignis  Andere Gründe EE
+MSRTD CRRFN Mis routed  Correct routing information but at the wrong facility / hub / gateway Routingfehler Sortierfehler - richtiger Routing-Code / Sendung in falscher Lokation EE
+MSRTD ICRRT Mis routed  Incorrect routing information Routingfehler Fehlrouting wg. falschem Routingcode  EE
+MVARR NRQRD Movement / tour vehicle arrived ICE Details Fahrzeug angekommen Keine weiteren Details erforderlich EE
+OFWRD RTSCR Onforwarded Return to shipper at customer request Nachsendung / Rücksendung Rücksendung aufgrund von Kundenwunsch EE
+SRTED FWAPS Sorted  ForWarded for Army Postal Service Sortierung  Weiterleitung für die Feldpost-Bearbeitung  EE
+SRTED FWEXH Sorted  ForWarded for Export Handling Sortierung  Weiterleitung zur Exportbearbeitung EE
+SRTED FWEXP Sorted  ForWarded for EXPress handling  Sortierung  Weiterleitung zum Transport im Express-Netzwerk EE
+UDPFD NRQRD Unidentified piece found  ICE Details Sendung ohne Label  Keine weiteren Details erforderlich EE
+ULFMV TCHBD Unloaded from movement / tour vehicle Technical / Breakdown Eingang Technische Probleme EE
+ULFMV UNLDD Unloaded from movement / tour vehicle Unloaded  Eingang Entladung EE
+DMGDS PUDMG Damage discovered Picked up damaged Beschädigt  Erfolgreich abgeholt - Sendung beschädigt übernommen  ES
+DMGDS ULDMG Damage discovered Unloaded damaged  Beschädigt  Bei Entladung beschädigt vorgefunden  ES
+EXPHD FDGCH Exception hold  Failed security check Sonderereignis  Sicherheitsprüfung negativ  ES
+LDTMV SERPT Loaded to movement / tour vehicle Service Point Abgang  Filiale / Agentur ES
+MVDPT NRQRD Movement / tour vehicle departed  ICE Details Fahrzeug hat den Standort verlassen Keine weiteren Details erforderlich ES
+PCKDU PUBCR Picked up Piece pick up Abholung  Erfolgreich abgeholt  ES
+SHRCU PCKST Shipment Received from customer Packstation Einlieferung der Sendung durch den Kunden Packstation ES
+SHRCU SERPT Shipment Received from customer Service Point Einlieferung der Sendung durch den Kunden Filiale / Agentur ES
+UDPFD NRQRD Unidentified piece found  ICE Details Sendung ohne Label  Keine weiteren Details erforderlich ES
+ULFMV UNLDD Unloaded from movement / tour vehicle Unloaded  Eingang Entladung ES
+EXPHD DMGED Exception hold  Damage under investigation  Sonderereignis  Keine Übernahme wegen Beschädigung  LA
+HLDCC HDFCT Held for consignee collection Held at DHL facility  Sendung liegt zur Abholung bereit Lagerung wegen Selbstabholung LA
+INFCL HLDAY In facility HoLiDAY Lagerung  Lagerung wegen Ferien, Betriebsferien oder Feiertagen LA
+INFCL HLDSR In facility HeLD on Shipper Request Lagerung  Lagerung aufgrund einer Absenderverfügung LA
+INFCL NRQRD In facility ICE Details Lagerung  Keine weiteren Details erforderlich LA
+INFCL TCHBD In facility Technical / Breakdown Lagerung  Technische Probleme LA
+OOSTR NRQRD Out of storage  ICE Details Weiterbearbeitung nach Lagerung Keine weiteren Details erforderlich NB
+SRTED NRQRD Sorted  ICE Details Sortierung  Keine weiteren Details erforderlich NB
+WGDMM PCCHR Weight/Volume/Dimensions measured Piece characteristics Gewicht/Volumen/Abmessungsermittlung  Gewichtserfassung NB
+CNRFC PCKST Consignee notified - Ready for collection Packstation Benachrichtigt  Packstation PO
+CTBRN NRQRD Customer broker notified  ICE Details Agent für Zollabfertigung benachrichtigt  Keine weiteren Details erforderlich PO
+EXPHD MSSDT Exception hold  Missing data  Sonderereignis  fehlende Daten  PO
+EXPHD STBSD Exception hold  Stopped by sender Sonderereignis  Absenderverfügung: Sendung anhalten PO
+HNDDE AGENT Handover to 3rd party - Delivery details expected Agent Übergabe an Servicepartner  Übergabe an Bevollmächtigten  PO
+ICPRC NRQRD Into clearance processing ICE Details Zollabfertigung gestartet Keine weiteren Details erforderlich PO
+INFCL HNDCA In facility Held for Next working Day delivery on Lagerung  Rückstellung für eine Zustellung am nächsten Werktag aufgrund einer Empfängervereinbarung PO
+INFCL INCSH In facility Incomplete shipment Lagerung  Mehrteilige Sendung unvollständig PO
+LDEXC BDADD Loading exception Bad address Ladungsrückstellung Adresse fehlerhaft  PO
+LDEXC MSDLA Loading exception Missed delivery cycle - Received after cut off  Ladungsrückstellung Sendung zu spät in Station für Zustellung PO
+LDEXC OVRLD Loading exception Overload  Ladungsrückstellung Abladung wg. Überladung PO
+LDTMV MVMTV Loaded to movement / tour vehicle Movement / tour vehicle Abgang  Beladung  PO
+LDTMV PCKST Loaded to movement / tour vehicle Packstation Abgang  Packstation PO
+LDTMV SECDA Loaded to movement / tour vehicle SECond Delivery Attempt Abgang  Zweiter Zustellversuch  PO
+MSRTD CRRCS Mis routed  Correct Routing information but delivered to wRong ConSignee  Routingfehler Falscher Empfänger bei Firmenzustellung PO
+MSRTD CRRFN Mis routed  Correct routing information but at the wrong facility / hub / gateway Routingfehler Sortierfehler - richtiger Routing-Code / Sendung in falscher Lokation PO
+OFWRD RDRCR Onforwarded Redirected by customer request  Nachsendung / Rücksendung Absender-/Empfängerverfügung: Zustellung an andere Adresse  PO
+OFWRD RDRDO Onforwarded Redirected by redirection order Nachsendung / Rücksendung Absender-/Empfängerverfügung: Zustellung an andere Adresse  PO
+SRTED NRQRD Sorted  ICE Details Sortierung  Keine weiteren Details erforderlich PO
+ULFMV UNLDD Unloaded from movement / tour vehicle Unloaded  Eingang Entladung PO
+PARCV NRQRD PAN Received by Carrier ICE Details Elektronische Sendungsdaten liegen vor  Keine weiteren Details erforderlich VA
+PURCR BOOKN Pick up request created Booking Abholauftrag erhalten Buchung erfolgt VA
+CNRFC CLPCP Consignee notified - Ready for collection Collection point capacity Benachrichtigt  Packstation voll - die Sendung wurde in die Filiale zugestellt  ZF
+CNRFC NRQRD Consignee notified - Ready for collection ICE Details Benachrichtigt  Keine weiteren Details erforderlich ZF
+CNRFC PCKST Consignee notified - Ready for collection Packstation Benachrichtigt  Packstation ZF
+HLDCC HDFCT Held for consignee collection Held at DHL facility  Sendung liegt zur Abholung bereit Lagerung wegen Selbstabholung ZF
+HLDCC LDPCK Held for consignee collection Held in automated collection site Sendung liegt zur Abholung bereit Zustellung an Packstation / Einlieferung in Packstation ZF
+HLDCC SERPT Held for consignee collection Service Point Sendung liegt zur Abholung bereit Filiale / Agentur ZF
+HNDDE SERPT Handover to 3rd party - Delivery details expected Service Point Übergabe an Servicepartner  Filiale / Agentur ZF
+DLVRF CROAT Delivery refused  DHL arrived outside agreed time Annahme verweigert  Kurier unpünktlich  ZN
+DLVRF DMGED Delivery refused  Damage under investigation  Annahme verweigert  Keine Übernahme wegen Beschädigung  ZN
+DLVRF NTIHU Delivery refused  Not in Handling Unit  Annahme verweigert  Sendung fehlt in Transporteinheit (Postbox) ZN
+DLVRF NTORD Delivery refused  Not ordered Annahme verweigert  Annahmeverweigerung - nicht bestellt  ZN
+DLVRF OTHER Delivery refused  Other Annahme verweigert  Andere Gründe ZN
+DLVRF SHNCP Delivery refused  Shipment not complete Annahme verweigert  Sendung nicht vollständig ZN
+DLVRF TRPMT Delivery refused  Terms of payment  Annahme verweigert  Zahlungsschwierigkeiten / Zahlungsterminal defekt ZN
+MVTEX FRMJR Movement / tour vehicle exception Force majeur  Problem beim Transport  Verzögerung wegen höherer Gewalt  ZN
+MVTEX TCHBD Movement / tour vehicle exception Technical / Breakdown Problem beim Transport  Technische Probleme ZN
+NTDEL AGNEG Not delivered Age-Check negativ Nicht ausgeliefert  Altersprüfung negativ ZN
+NTDEL BDADD Not delivered Bad address Nicht ausgeliefert  Adresse fehlerhaft  ZN
+NTDEL CLOSD Not delivered Closed  Nicht ausgeliefert  Geschlossen ZN
+NTDEL CNCNR Not delivered Consignee could not be reached  Nicht ausgeliefert  Empfänger nicht erreicht  ZN
+NTDEL CPUNK Not delivered Company dissolved / unknown Nicht ausgeliefert  Empfänger unbekannt ZN
+NTDEL CRROT Not delivered Courier out of time Nicht ausgeliefert  Kurier zu spät / Schicht zuende ZN
+NTDEL CTCNI Not delivered Customer could not identify themselves  Nicht ausgeliefert  Identitätsprüfung negativ ZN
+NTDEL IDNEG Not delivered Identitycheck negativ Nicht ausgeliefert  Identitätsprüfung Negativ ZN
+NTDEL MOVED Not delivered Moved Nicht ausgeliefert  Empfänger verzogen  ZN
+NTDEL NAGTB Not delivered Not According to General Terms of Business  Nicht ausgeliefert  Sendung nicht AGB-konform - Rücksendung ZN
+NTDEL NHOME Not delivered Not home  Nicht ausgeliefert  Benachrichtigt: Empfänger nicht angetroffen ZN
+NTDEL NTCCN Not delivered Not collected by consignee  Nicht ausgeliefert  Keine Abholung durch Kunden zum Ablauf der Lagerfrist ZN
+NTDEL RSEXW Not delivered Return to Shipper EXWorks error Nicht ausgeliefert  Rücksendung - Empfänger ist nicht berechtigt "Ab Werk"-Sendungen zu erhalten  ZN
+NTDEL SHINF Not delivered SHipper INFormation Nicht ausgeliefert  Unzustellbarkeitsanzeige  ZN
+NTDEL TRPMT Not delivered Terms of payment  Nicht ausgeliefert  Zahlungsschwierigkeiten / Zahlungsterminal defekt ZN
+NTDEL WRGTR Not delivered Wrong tour  Nicht ausgeliefert  Falsche Tour  ZN
+OFWRD RTSSA Onforwarded Return to shipper by customer standard agreement  Nachsendung / Rücksendung Rücksendung aufgrund Vereinbarung mit Absender  ZN
+PCKDU INCSH Picked up Incomplete shipment Abholung  Mehrteilige Sendung unvollständig ZN
+RETRN MSSDT Shipment will be returned to origin Missing data  Rücksendung fehlende Daten  ZN
+CNFSC CFBCT Confiscation  Confiscated by customs  Beschlagnahme/Postsperre  Konfisziert durch Zollbehörde ZO
+DMGDS ULDMG Damage discovered Unloaded damaged  Beschädigt  Bei Entladung beschädigt vorgefunden  ZO
+EXPHD FDGCH Exception hold  Failed security check Sonderereignis  Sicherheitsprüfung negativ  ZO
+HLDCP NORSN Held for clearance purposes No reason Bereithaltung zur Zollübergabe  Keine weitere Begründung durch Zoll ZO
+HLDCU EXAMX Held by Customs Customs examination - Status code EXAM  Zollbearbeitung Zoll-Klassifizierung als EXAM ZO
+HNDND CUSTM Handover to 3rd party - No delivery details expected  Customs Übergabe an Servicepartner  Übergabe an Zoll zur Prüfung und Zustellung ZO
+ICPRC NRQRD Into clearance processing ICE Details Zollabfertigung gestartet Keine weiteren Details erforderlich ZO
+ITBAR CSTBA In bonded area  Customs bonded area Lagerung unter Verschluss Zollverschluss  ZO
+OOBAR NRQRD Out of bonded area  ICE Details Weiterbearbeitung nach gesicherter Lagerung Keine weiteren Details erforderlich ZO
+RSDCP OARRV Released from clearance processing  On arrival  Zollfreigabe  Zollfreigabe  ZO
+UDPFD NRQRD Unidentified piece found  ICE Details Sendung ohne Label  Keine weiteren Details erforderlich ZO
+DLVRD ACCCS Delivered Accepted - contents short Ausgeliefert  Erfolgreiche Zustellung - Inhaltsschmälerung  ZU
+DLVRD ACCDM Delivered Accepted - damaged  Ausgeliefert  Erfolgreiche Zustellung - Beschädigt  ZU
+DLVRD ACCPK Delivered Collected from automated site Ausgeliefert  Sendung aus Packstation entnommen ZU
+DLVRD ACCPT Delivered Accepted  Ausgeliefert  Erfolgreiche Zustellung ZU
+DLVRD ACCSI Delivered Accepted - Shipment incomplete  Ausgeliefert  Erfolgreiche Zustellung - Sendung unvollständig ZU
+DLVRD CODAR Delivered Electronic shipment advise received Ausgeliefert  Auftrag zur NN-Betrag-Überweisung von Bank bestätigt  ZU
+DLVRD CODRP Delivered COD remittance processed  Ausgeliefert  NN-Betrag-Überweisung durch Bank ist erfolgt. ZU
+DLVRD DIDLV Delivered Direct delivery at hub/delivery depot Ausgeliefert  Vereinfachte Zustellung ZU
+DLVRD PCKAD Delivered PaCKstation – Alternate Delivery  Ausgeliefert  Packstation auf Firmengelände voll - Zustellung an Hauspoststelle ZU
+HNDDE CUSBR Handover to 3rd party - Delivery details expected Customs broker  Übergabe an Servicepartner  Übergabe an einen Agenten, der die Zollabfertigung & Zustellung durchführt  ZU
+HNDND HNDOC Handover to 3rd party - No delivery details expected  Handover to other carrier at customer request Übergabe an Servicepartner  Absenderverfügung: Übergabe an anderen Dienstleister  ZU
